@@ -1,0 +1,82 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: Gotham Rounded, sans-serif;
+  font-weight: normal;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: #00AA;
+}
+
+.grid-main {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+
+  grid-template:
+    "resultat resultat resultat resultat"
+    "actions actions actions actions"
+    "fruits fruits fruits transports"
+    "fruits fruits fruits transports"
+    "fruits fruits fruits transports"
+    "fruits fruits fruits transports";
+    grid-template-columns: repeat(4,100px);
+    grid-template-rows: repeat(6,100px);
+  }
+
+.grid-fruits {
+  grid-area: fruits;
+}
+
+.grid-fruits {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+}
+
+.grid-transports {
+  grid-area: transports
+}
+
+.grid-transports {
+  display: grid;
+}
+
+.grid-resultat {
+  grid-area: resultat
+}
+
+.grid-resultat {
+  display: grid;
+  background-color: #1a0641;
+  border-radius: 5px;
+  font-size: 150%;
+  color: white;
+  text-align: right;
+  font-size: 3em;
+}
+
+.grid-actions {
+  grid-area: actions;
+  
+}
+
+.grid-actions {
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+}
+
+.grid-main div {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  font-size: 3rem;
+  border: 1px solid white;
+  outline: none;
+  background-color: rgba(205, 182, 248, 0.75);
+}
